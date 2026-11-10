@@ -15,7 +15,7 @@ description: 自分の Obsidian ノートの運用規則。Obsidian ノートを
 
 - `ai-log` セクションに記録する。
 - 各行に Zettelkasten 形式のタイムスタンプを付け、Markdown の箇条書きで記録する。
-- 追記は専用スクリプトを介して行い、順序を保つ。
+- 追記は [scripts/append_ai_log.py](scripts/append_ai_log.py) を介して行い、順序を保つ。呼び方は `--help` で確認する。
 - 指示がない限り過去の `ai-log` を改変しない。
 - 人間は読まない前提とし、自然言語である必要はない。
 
