@@ -10,7 +10,9 @@ import subprocess
 import sys
 
 
-def append_entries(path, entries):
+def append_entries(path, entries, *, timestamp=None):
+    if timestamp is not None:
+        datetime.strptime(timestamp, "%Y%m%d%H%M%S")
     with path.open("r+", encoding="utf-8", newline="") as note:
         fcntl.flock(note, fcntl.LOCK_EX)
         text = note.read()
@@ -38,12 +40,19 @@ def append_entries(path, entries):
         if section is None:
             raise ValueError("The note has no ai-log section")
         newline = "\r\n" if "\r\n" in text else "\n"
-        timestamp = datetime.now().astimezone().strftime("%Y%m%d%H%M%S")
-        content = newline.join(f"- {timestamp} {entry}" for entry in entries)
+        timestamp = timestamp or datetime.now().astimezone().strftime("%Y%m%d%H%M%S")
+        block_id = timestamp
+        used_ids = set(re.findall(r"\^([A-Za-z0-9-]+)[ \t]*$", text, re.MULTILINE))
+        suffix = 2
+        while block_id in used_ids:
+            block_id = f"{timestamp}-{suffix}"
+            suffix += 1
+        content = f"- {timestamp} {' / '.join(entries)} ^{block_id}"
         separator = "" if text[:end].endswith("\n") else newline
         note.seek(0)
         note.write(text[:end] + separator + content + newline + text[end:])
         note.truncate()
+        return block_id
 
 
 def main():
@@ -76,10 +85,10 @@ def main():
     if not destination.is_relative_to(vault):
         parser.error("The note must be inside the vault")
     try:
-        append_entries(destination, entries)
+        block_id = append_entries(destination, entries)
     except (OSError, ValueError) as error:
         parser.error(str(error))
-    print(path)
+    print(f"![[{Path(path).with_suffix('').as_posix()}#^{block_id}]]")
 
 
 if __name__ == "__main__":
