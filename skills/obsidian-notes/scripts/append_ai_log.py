@@ -2,9 +2,10 @@
 """Append a note's ai-log and embed the new entry in today's daily ai-log."""
 
 import argparse
-from contextlib import ExitStack
+from contextlib import ExitStack, contextmanager
 from datetime import datetime
 import fcntl
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -40,19 +41,35 @@ def insert_in_ai_log(text, content):
     return text[:end] + separator + content + newline + text[end:]
 
 
+@contextmanager
+def locked_notes(paths):
+    for _ in range(10):
+        with ExitStack() as stack:
+            notes = {}
+            # Keep lock order stable, including when reopening replaced files.
+            for target in sorted(paths):
+                note = stack.enter_context(target.open("r+", encoding="utf-8", newline=""))
+                fcntl.flock(note, fcntl.LOCK_EX)
+                notes[target] = note
+            # A path may have been replaced while either lock was pending.
+            try:
+                current = all(os.path.samestat(os.fstat(note.fileno()), target.stat())
+                              for target, note in notes.items())
+            except FileNotFoundError:
+                current = False
+            if current:
+                yield notes
+                return
+    raise OSError("Notes repeatedly replaced while acquiring locks; retry the append")
+
+
 def append_entries(path, entries, *, daily_path, note_link, timestamp=None):
     if timestamp is not None:
         datetime.strptime(timestamp, "%Y%m%d%H%M%S")
     path, daily_path = path.resolve(), daily_path.resolve()
     if path == daily_path:
         raise ValueError("Write log entries to a work note, not the daily note")
-    with ExitStack() as stack:
-        notes = {}
-        # Use a stable lock order when multiple processes share a daily note.
-        for target in sorted((path, daily_path)):
-            note = stack.enter_context(target.open("r+", encoding="utf-8", newline=""))
-            fcntl.flock(note, fcntl.LOCK_EX)
-            notes[target] = note
+    with locked_notes((path, daily_path)) as notes:
         text = notes[path].read()
         timestamp = timestamp or datetime.now().astimezone().strftime("%Y%m%d%H%M%S")
         block_id = timestamp
