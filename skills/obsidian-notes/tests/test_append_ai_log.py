@@ -72,7 +72,7 @@ class FileReplacementTests(unittest.TestCase):
                 self.append()
         self.assertTrue(all(note.closed for note in descriptors))
         self.assertNotIn("new log", self.note.read_text())
-        self.assertNotIn("![[", self.daily.read_text())
+        self.assertNotIn("[[", self.daily.read_text())
 
     def test_missing_path_after_lock_does_not_write(self):
         flock = log.fcntl.flock
@@ -88,7 +88,7 @@ class FileReplacementTests(unittest.TestCase):
         with patch.object(log.fcntl, "flock", side_effect=intercept):
             with self.assertRaises(FileNotFoundError):
                 self.append()
-        self.assertNotIn("![[", self.daily.read_text())
+        self.assertNotIn("[[", self.daily.read_text())
 
 
 if __name__ == "__main__":
