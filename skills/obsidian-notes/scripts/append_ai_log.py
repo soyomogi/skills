@@ -79,7 +79,7 @@ def append_entries(path, entries, *, daily_path, note_link, timestamp=None):
             block_id = f"{timestamp}-{suffix}"
             suffix += 1
         content = f"- {timestamp} {' / '.join(entries)} ^{block_id}"
-        reference = f"[[{note_link}#^{block_id}]]"
+        reference = f"- [[{note_link}#^{block_id}]]"
         # Validate both sections before changing either file.
         updates = {
             path: insert_in_ai_log(text, content),
