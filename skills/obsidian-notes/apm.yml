@@ -1,0 +1,16 @@
+name: obsidian-notes
+version: 1.0.0
+description: Personal conventions for maintaining Obsidian notes and AI work logs
+author: soyomogi
+license: MIT
+dependencies:
+  apm:
+    - git: obsidianmd/obsidian-skills
+      path: plugins/obsidian/skills/obsidian-cli
+      ref: 1.1.0
+    - git: obsidianmd/obsidian-skills
+      path: plugins/obsidian/skills/obsidian-markdown
+      ref: 1.1.0
+  mcp: []
+includes: auto
+scripts: {}

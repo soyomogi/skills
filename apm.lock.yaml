@@ -1,0 +1,588 @@
+lockfile_version: '2'
+apm_version: 0.35.1
+dependencies:
+- repo_url: _local/delegate-fix
+  name: delegate-fix
+  version: 1.0.0
+  package_type: hybrid
+  deployed_files:
+  - .agents/skills/delegate-fix
+  - .agents/skills/delegate-fix/SKILL.md
+  - .agents/skills/delegate-fix/apm.yml
+  - .claude/skills/delegate-fix
+  - .claude/skills/delegate-fix/SKILL.md
+  - .claude/skills/delegate-fix/apm.yml
+  deployed_file_hashes:
+    .agents/skills/delegate-fix/SKILL.md: sha256:2993087a73ef8a3b1241f97930f29a7637ab9c634a74568b32667994ad59bc74
+    .agents/skills/delegate-fix/apm.yml: sha256:d3dca5fb07237ddf69044839b5647f5b1122250e1bc5ca8a037a3fe58e7a947b
+    .claude/skills/delegate-fix/SKILL.md: sha256:2993087a73ef8a3b1241f97930f29a7637ab9c634a74568b32667994ad59bc74
+    .claude/skills/delegate-fix/apm.yml: sha256:d3dca5fb07237ddf69044839b5647f5b1122250e1bc5ca8a037a3fe58e7a947b
+  source: local
+  local_path: ./skills/delegate-fix
+  content_hash: sha256:832bde784926e77c9285288fcd8f37e6d325aedd3ec9644f50d388c7b93b1a99
+  declared_license: MIT
+- repo_url: _local/session-close
+  name: session-close
+  version: 1.0.0
+  package_type: hybrid
+  deployed_files:
+  - .agents/skills/session-close
+  - .agents/skills/session-close/SKILL.md
+  - .agents/skills/session-close/apm.yml
+  - .claude/skills/session-close
+  - .claude/skills/session-close/SKILL.md
+  - .claude/skills/session-close/apm.yml
+  deployed_file_hashes:
+    .agents/skills/session-close/SKILL.md: sha256:ec9e756fefe568e91492b2a99900e9b0080bb6e8c4be2831c4af6db795d957fa
+    .agents/skills/session-close/apm.yml: sha256:07a676e3c4b676daabccfa0c09fc4f19eeb447635590307f162572fa30710369
+    .claude/skills/session-close/SKILL.md: sha256:ec9e756fefe568e91492b2a99900e9b0080bb6e8c4be2831c4af6db795d957fa
+    .claude/skills/session-close/apm.yml: sha256:07a676e3c4b676daabccfa0c09fc4f19eeb447635590307f162572fa30710369
+  source: local
+  local_path: ./skills/session-close
+  content_hash: sha256:6d8294ae27b39df96140d3dee3111010a6817e94527147a19edd2d249ad65dc6
+  declared_license: MIT
+- repo_url: _local/session-start
+  name: session-start
+  version: 1.0.0
+  package_type: hybrid
+  deployed_files:
+  - .agents/skills/session-start
+  - .agents/skills/session-start/SKILL.md
+  - .agents/skills/session-start/apm.yml
+  - .claude/skills/session-start
+  - .claude/skills/session-start/SKILL.md
+  - .claude/skills/session-start/apm.yml
+  deployed_file_hashes:
+    .agents/skills/session-start/SKILL.md: sha256:65f0e7279512a3560219dde1cb53a0780f846e39806886f01f76474438d84f9f
+    .agents/skills/session-start/apm.yml: sha256:e1280b02954cc7be6d1cba62b8ea9dfcca6352564c0375f3fc24cbecde4697ad
+    .claude/skills/session-start/SKILL.md: sha256:65f0e7279512a3560219dde1cb53a0780f846e39806886f01f76474438d84f9f
+    .claude/skills/session-start/apm.yml: sha256:e1280b02954cc7be6d1cba62b8ea9dfcca6352564c0375f3fc24cbecde4697ad
+  source: local
+  local_path: ./skills/session-start
+  content_hash: sha256:3b98794303f9d4a1b8b6634ea2e8c54b38026a639c3f6a5042bd430c0fe36196
+  declared_license: MIT
+- repo_url: _local/obsidian-notes
+  name: obsidian-notes
+  version: 1.0.0
+  depth: 2
+  resolved_by: _local/session-close
+  package_type: hybrid
+  deployed_files:
+  - .agents/skills/obsidian-notes
+  - .agents/skills/obsidian-notes/SKILL.md
+  - .agents/skills/obsidian-notes/apm.yml
+  - .agents/skills/obsidian-notes/scripts/append_ai_log.py
+  - .agents/skills/obsidian-notes/tests/test_append_ai_log.py
+  - .claude/skills/obsidian-notes
+  - .claude/skills/obsidian-notes/SKILL.md
+  - .claude/skills/obsidian-notes/apm.yml
+  - .claude/skills/obsidian-notes/scripts/append_ai_log.py
+  - .claude/skills/obsidian-notes/tests/test_append_ai_log.py
+  deployed_file_hashes:
+    .agents/skills/obsidian-notes/SKILL.md: sha256:32732f36fce55b371a4869e84bf67eb603742c3fc623e614ab38e123b6180600
+    .agents/skills/obsidian-notes/apm.yml: sha256:9d980ed8b779d535a5f161ace4befc280f2583cdabc17f4eea2b08d362226632
+    .agents/skills/obsidian-notes/scripts/append_ai_log.py: sha256:02751a53696704647096bc544ab2f021dad5169ea607f2ba6d7ab8ef3e4a0405
+    .agents/skills/obsidian-notes/tests/test_append_ai_log.py: sha256:3cab232406f857e4fd815516d96a2126acdf6feb4d47c57832a9566f7fc790c2
+    .claude/skills/obsidian-notes/SKILL.md: sha256:32732f36fce55b371a4869e84bf67eb603742c3fc623e614ab38e123b6180600
+    .claude/skills/obsidian-notes/apm.yml: sha256:9d980ed8b779d535a5f161ace4befc280f2583cdabc17f4eea2b08d362226632
+    .claude/skills/obsidian-notes/scripts/append_ai_log.py: sha256:02751a53696704647096bc544ab2f021dad5169ea607f2ba6d7ab8ef3e4a0405
+    .claude/skills/obsidian-notes/tests/test_append_ai_log.py: sha256:3cab232406f857e4fd815516d96a2126acdf6feb4d47c57832a9566f7fc790c2
+  source: local
+  local_path: ../obsidian-notes
+  declaring_parent: ./skills/session-close
+  anchored_local_path: skills/obsidian-notes
+  content_hash: sha256:69cd95e9eb58957f4f9ae2b7d704f5d437e33c3ba4946a28efc0366b550528c3
+  declared_license: MIT
+- repo_url: herdrdev/herdr
+  name: herdr
+  host: github.com
+  resolved_commit: 2ecf19a92fc3a7fff75b6ce3655ef04f4625ec01
+  resolved_ref: v0.9.5
+  version: unknown
+  virtual_path: skills/herdr
+  is_virtual: true
+  depth: 2
+  resolved_by: _local/delegate-fix
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/herdr
+  - .agents/skills/herdr/SKILL.md
+  - .claude/skills/herdr
+  - .claude/skills/herdr/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/herdr/SKILL.md: sha256:fbd9d502767f7dff29c211505a0bd9ba34e980ed4cc456247e2adc1642883984
+    .claude/skills/herdr/SKILL.md: sha256:fbd9d502767f7dff29c211505a0bd9ba34e980ed4cc456247e2adc1642883984
+  content_hash: sha256:72177e911f55467de8737174072ec6bb08e30bbf62bceabcb69678e944398b18
+- repo_url: obsidianmd/obsidian-skills
+  name: obsidian-cli
+  host: github.com
+  resolved_commit: 95b7225be131939ce0ae3dfe728bf82337ad56aa
+  resolved_ref: 1.1.0
+  version: 1.1.0
+  virtual_path: plugins/obsidian/skills/obsidian-cli
+  is_virtual: true
+  depth: 3
+  resolved_by: _local/obsidian-notes
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/obsidian-cli
+  - .agents/skills/obsidian-cli/SKILL.md
+  - .claude/skills/obsidian-cli
+  - .claude/skills/obsidian-cli/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/obsidian-cli/SKILL.md: sha256:f4e4efd04634b4a1e95f0662dc13b81cc8083bec54522efba4c1e9dcc1c11045
+    .claude/skills/obsidian-cli/SKILL.md: sha256:f4e4efd04634b4a1e95f0662dc13b81cc8083bec54522efba4c1e9dcc1c11045
+  content_hash: sha256:91dff36298075ea7c5709da210b7b625c1c42c61f4231371e9525bdc83c51ffb
+  constraint: 1.1.0
+  resolved_tag: 1.1.0
+  resolved_at: '2026-11-13T11:36:51+00:00'
+- repo_url: obsidianmd/obsidian-skills
+  name: obsidian-markdown
+  host: github.com
+  resolved_commit: 95b7225be131939ce0ae3dfe728bf82337ad56aa
+  resolved_ref: 1.1.0
+  version: 1.1.0
+  virtual_path: plugins/obsidian/skills/obsidian-markdown
+  is_virtual: true
+  depth: 3
+  resolved_by: _local/obsidian-notes
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/obsidian-markdown
+  - .agents/skills/obsidian-markdown/SKILL.md
+  - .agents/skills/obsidian-markdown/references/CALLOUTS.md
+  - .agents/skills/obsidian-markdown/references/EMBEDS.md
+  - .agents/skills/obsidian-markdown/references/PROPERTIES.md
+  - .claude/skills/obsidian-markdown
+  - .claude/skills/obsidian-markdown/SKILL.md
+  - .claude/skills/obsidian-markdown/references/CALLOUTS.md
+  - .claude/skills/obsidian-markdown/references/EMBEDS.md
+  - .claude/skills/obsidian-markdown/references/PROPERTIES.md
+  deployed_file_hashes:
+    .agents/skills/obsidian-markdown/SKILL.md: sha256:f1c4ff5257d3f9743af797d755cabeef129f553704d5ff67ebf1239f9569f081
+    .agents/skills/obsidian-markdown/references/CALLOUTS.md: sha256:9912ec2e3f8711f65b8ceb82cc19cbffc5e6f8ccf2ab627e18926c522c383d8b
+    .agents/skills/obsidian-markdown/references/EMBEDS.md: sha256:63b6205507e28fb58cf200bc348a2b139e50ae739743e2e6316732148973cb7a
+    .agents/skills/obsidian-markdown/references/PROPERTIES.md: sha256:f2d01b096a1c981a675e86b6a8c46bab271b278497646d465467b8120043b87c
+    .claude/skills/obsidian-markdown/SKILL.md: sha256:f1c4ff5257d3f9743af797d755cabeef129f553704d5ff67ebf1239f9569f081
+    .claude/skills/obsidian-markdown/references/CALLOUTS.md: sha256:9912ec2e3f8711f65b8ceb82cc19cbffc5e6f8ccf2ab627e18926c522c383d8b
+    .claude/skills/obsidian-markdown/references/EMBEDS.md: sha256:63b6205507e28fb58cf200bc348a2b139e50ae739743e2e6316732148973cb7a
+    .claude/skills/obsidian-markdown/references/PROPERTIES.md: sha256:f2d01b096a1c981a675e86b6a8c46bab271b278497646d465467b8120043b87c
+  content_hash: sha256:72036fef313b7dd1c3d7e1afa17ab747f7f925392f942f22eeb7b67c817c1973
+  constraint: 1.1.0
+  resolved_tag: 1.1.0
+  resolved_at: '2026-11-13T11:36:51+00:00'
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/skills/delegate-fix
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/delegate-fix
+  active_owner: ./skills/delegate-fix
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/delegate-fix/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/delegate-fix
+  active_owner: ./skills/delegate-fix
+  content_hash: sha256:2993087a73ef8a3b1241f97930f29a7637ab9c634a74568b32667994ad59bc74
+- kind: project-relative
+  target: claude
+  value: .claude/skills/delegate-fix/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/delegate-fix
+  active_owner: ./skills/delegate-fix
+  content_hash: sha256:d3dca5fb07237ddf69044839b5647f5b1122250e1bc5ca8a037a3fe58e7a947b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/herdr
+  runtime: null
+  scope: project
+  owners:
+  - herdrdev/herdr/skills/herdr
+  active_owner: herdrdev/herdr/skills/herdr
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/herdr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - herdrdev/herdr/skills/herdr
+  active_owner: herdrdev/herdr/skills/herdr
+  content_hash: sha256:fbd9d502767f7dff29c211505a0bd9ba34e980ed4cc456247e2adc1642883984
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-cli
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-cli/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
+  content_hash: sha256:f4e4efd04634b4a1e95f0662dc13b81cc8083bec54522efba4c1e9dcc1c11045
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-markdown
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-markdown/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: sha256:f1c4ff5257d3f9743af797d755cabeef129f553704d5ff67ebf1239f9569f081
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-markdown/references/CALLOUTS.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: sha256:9912ec2e3f8711f65b8ceb82cc19cbffc5e6f8ccf2ab627e18926c522c383d8b
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-markdown/references/EMBEDS.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: sha256:63b6205507e28fb58cf200bc348a2b139e50ae739743e2e6316732148973cb7a
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-markdown/references/PROPERTIES.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: sha256:f2d01b096a1c981a675e86b6a8c46bab271b278497646d465467b8120043b87c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-notes
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-notes/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: sha256:32732f36fce55b371a4869e84bf67eb603742c3fc623e614ab38e123b6180600
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-notes/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: sha256:9d980ed8b779d535a5f161ace4befc280f2583cdabc17f4eea2b08d362226632
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-notes/scripts/append_ai_log.py
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: sha256:02751a53696704647096bc544ab2f021dad5169ea607f2ba6d7ab8ef3e4a0405
+- kind: project-relative
+  target: claude
+  value: .claude/skills/obsidian-notes/tests/test_append_ai_log.py
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: sha256:3cab232406f857e4fd815516d96a2126acdf6feb4d47c57832a9566f7fc790c2
+- kind: project-relative
+  target: claude
+  value: .claude/skills/session-close
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-close
+  active_owner: ./skills/session-close
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/session-close/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-close
+  active_owner: ./skills/session-close
+  content_hash: sha256:ec9e756fefe568e91492b2a99900e9b0080bb6e8c4be2831c4af6db795d957fa
+- kind: project-relative
+  target: claude
+  value: .claude/skills/session-close/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-close
+  active_owner: ./skills/session-close
+  content_hash: sha256:07a676e3c4b676daabccfa0c09fc4f19eeb447635590307f162572fa30710369
+- kind: project-relative
+  target: claude
+  value: .claude/skills/session-start
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-start
+  active_owner: ./skills/session-start
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/session-start/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-start
+  active_owner: ./skills/session-start
+  content_hash: sha256:65f0e7279512a3560219dde1cb53a0780f846e39806886f01f76474438d84f9f
+- kind: project-relative
+  target: claude
+  value: .claude/skills/session-start/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-start
+  active_owner: ./skills/session-start
+  content_hash: sha256:e1280b02954cc7be6d1cba62b8ea9dfcca6352564c0375f3fc24cbecde4697ad
+- kind: project-relative
+  target: codex
+  value: .agents/skills/delegate-fix
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/delegate-fix
+  active_owner: ./skills/delegate-fix
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/delegate-fix/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/delegate-fix
+  active_owner: ./skills/delegate-fix
+  content_hash: sha256:2993087a73ef8a3b1241f97930f29a7637ab9c634a74568b32667994ad59bc74
+- kind: project-relative
+  target: codex
+  value: .agents/skills/delegate-fix/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/delegate-fix
+  active_owner: ./skills/delegate-fix
+  content_hash: sha256:d3dca5fb07237ddf69044839b5647f5b1122250e1bc5ca8a037a3fe58e7a947b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/herdr
+  runtime: null
+  scope: project
+  owners:
+  - herdrdev/herdr/skills/herdr
+  active_owner: herdrdev/herdr/skills/herdr
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/herdr/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - herdrdev/herdr/skills/herdr
+  active_owner: herdrdev/herdr/skills/herdr
+  content_hash: sha256:fbd9d502767f7dff29c211505a0bd9ba34e980ed4cc456247e2adc1642883984
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-cli
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-cli/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-cli
+  content_hash: sha256:f4e4efd04634b4a1e95f0662dc13b81cc8083bec54522efba4c1e9dcc1c11045
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-markdown
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-markdown/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: sha256:f1c4ff5257d3f9743af797d755cabeef129f553704d5ff67ebf1239f9569f081
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-markdown/references/CALLOUTS.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: sha256:9912ec2e3f8711f65b8ceb82cc19cbffc5e6f8ccf2ab627e18926c522c383d8b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-markdown/references/EMBEDS.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: sha256:63b6205507e28fb58cf200bc348a2b139e50ae739743e2e6316732148973cb7a
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-markdown/references/PROPERTIES.md
+  runtime: null
+  scope: project
+  owners:
+  - obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  active_owner: obsidianmd/obsidian-skills/plugins/obsidian/skills/obsidian-markdown
+  content_hash: sha256:f2d01b096a1c981a675e86b6a8c46bab271b278497646d465467b8120043b87c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-notes
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-notes/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: sha256:32732f36fce55b371a4869e84bf67eb603742c3fc623e614ab38e123b6180600
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-notes/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: sha256:9d980ed8b779d535a5f161ace4befc280f2583cdabc17f4eea2b08d362226632
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-notes/scripts/append_ai_log.py
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: sha256:02751a53696704647096bc544ab2f021dad5169ea607f2ba6d7ab8ef3e4a0405
+- kind: project-relative
+  target: codex
+  value: .agents/skills/obsidian-notes/tests/test_append_ai_log.py
+  runtime: null
+  scope: project
+  owners:
+  - local:skills/obsidian-notes
+  active_owner: local:skills/obsidian-notes
+  content_hash: sha256:3cab232406f857e4fd815516d96a2126acdf6feb4d47c57832a9566f7fc790c2
+- kind: project-relative
+  target: codex
+  value: .agents/skills/session-close
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-close
+  active_owner: ./skills/session-close
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/session-close/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-close
+  active_owner: ./skills/session-close
+  content_hash: sha256:ec9e756fefe568e91492b2a99900e9b0080bb6e8c4be2831c4af6db795d957fa
+- kind: project-relative
+  target: codex
+  value: .agents/skills/session-close/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-close
+  active_owner: ./skills/session-close
+  content_hash: sha256:07a676e3c4b676daabccfa0c09fc4f19eeb447635590307f162572fa30710369
+- kind: project-relative
+  target: codex
+  value: .agents/skills/session-start
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-start
+  active_owner: ./skills/session-start
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/session-start/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-start
+  active_owner: ./skills/session-start
+  content_hash: sha256:65f0e7279512a3560219dde1cb53a0780f846e39806886f01f76474438d84f9f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/session-start/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/session-start
+  active_owner: ./skills/session-start
+  content_hash: sha256:e1280b02954cc7be6d1cba62b8ea9dfcca6352564c0375f3fc24cbecde4697ad

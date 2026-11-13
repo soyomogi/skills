@@ -1,0 +1,11 @@
+name: session-close
+version: 1.0.0
+description: Record completed work and the next handoff in an Obsidian note
+author: soyomogi
+license: MIT
+dependencies:
+  apm:
+    - path: ../obsidian-notes
+  mcp: []
+includes: auto
+scripts: {}

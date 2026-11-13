@@ -1,0 +1,11 @@
+name: session-start
+version: 1.0.0
+description: Resume work using the current state and handoff in an Obsidian note
+author: soyomogi
+license: MIT
+dependencies:
+  apm:
+    - path: ../obsidian-notes
+  mcp: []
+includes: auto
+scripts: {}

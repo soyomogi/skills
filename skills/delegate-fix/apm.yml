@@ -1,0 +1,13 @@
+name: delegate-fix
+version: 1.0.0
+description: Delegate implementation of the preceding findings to another agent
+author: soyomogi
+license: MIT
+dependencies:
+  apm:
+    - git: herdrdev/herdr
+      path: skills/herdr
+      ref: v0.9.5
+  mcp: []
+includes: auto
+scripts: {}

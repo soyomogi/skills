@@ -1,0 +1,5 @@
+/.agents/
+/.claude/
+/build/
+# APM dependencies
+apm_modules/
