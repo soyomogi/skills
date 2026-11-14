@@ -1,13 +1,11 @@
 name: skills
 version: 1.0.0
-description: Personal skills for Obsidian notes, session handoffs, and delegated fixes
+description: Local skill deployment and dependency definitions for skillshare
 author: soyomogi
 license: MIT
-# Which agent platforms to deploy to (uncomment to pin):
-# targets:
-#   - copilot
-#   - claude
-
+# Global deployment is managed by skillshare, not APM.
+targets:
+  - codex
 dependencies:
   apm:
     - path: ./skills/delegate-fix

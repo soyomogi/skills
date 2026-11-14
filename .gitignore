@@ -3,3 +3,4 @@
 /build/
 # APM dependencies
 apm_modules/
+/.apm-local/

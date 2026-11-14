@@ -7,10 +7,8 @@ dependencies:
   apm:
     - git: obsidianmd/obsidian-skills
       path: plugins/obsidian/skills/obsidian-cli
-      ref: 1.1.0
     - git: obsidianmd/obsidian-skills
       path: plugins/obsidian/skills/obsidian-markdown
-      ref: 1.1.0
   mcp: []
 includes: auto
 scripts: {}
