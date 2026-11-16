@@ -1,0 +1,10 @@
+name: anti-slop
+version: 1.0.0
+description: Remove AI slop from text, keeping only the content itself
+author: soyomogi
+license: MIT
+dependencies:
+  apm: []
+  mcp: []
+includes: auto
+scripts: {}

@@ -39,3 +39,10 @@ APM 側の依存更新は `apm update --target codex`、skillshare で直接導�
 外部スキルの更新は `skillshare update --all -g` を使い、その後 `skillshare sync -g` を実行する。
 APM のグローバルインストール（`-g`）は使わない。
 Codex の組み込みスキルとサービス連携プラグインは別途管理する。
+
+
+## テスト
+
+開発用のシナリオと実行手順は [`test-skills/`](test-skills/) に置く。skillを変更したときは、必要に応じて対応するテストも更新し、振る舞いを確認する。anti-slopの実行手順は [`test-skills/anti-slop/RUN.md`](test-skills/anti-slop/RUN.md) を参照する。
+
+テストには架空の入力と期待する振る舞いを記載し、個人情報や実際の会話・案件情報を含めない。生成結果・実行ログ・採点記録は一時ディレクトリで扱い、コミットしない。`test-skills/` はskillの配布対象に含めない。
