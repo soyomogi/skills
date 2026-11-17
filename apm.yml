@@ -8,6 +8,7 @@ targets:
   - codex
 dependencies:
   apm:
+    - path: ./skills/anti-slop
     - path: ./skills/delegate-fix
     - path: ./skills/session-close
     - path: ./skills/session-start

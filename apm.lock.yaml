@@ -1,6 +1,23 @@
 lockfile_version: '1'
 apm_version: 0.35.1
 dependencies:
+- repo_url: _local/anti-slop
+  name: anti-slop
+  version: 1.0.0
+  package_type: hybrid
+  deployed_files:
+  - .agents/skills/anti-slop
+  - .agents/skills/anti-slop/EXTRACT.md
+  - .agents/skills/anti-slop/SKILL.md
+  - .agents/skills/anti-slop/apm.yml
+  deployed_file_hashes:
+    .agents/skills/anti-slop/EXTRACT.md: sha256:075812ada158338bcf039c1c2942027adad48d6ccc29892edd93f365674e0a4c
+    .agents/skills/anti-slop/SKILL.md: sha256:97fdba06deb74eb17832ef81bda3a793278515da49dc6412b5cc2affffb96c90
+    .agents/skills/anti-slop/apm.yml: sha256:89f60b02bc1ae1904cc0545ff78f3b341214b86ea1d43a6266011630e1618fce
+  source: local
+  local_path: ./skills/anti-slop
+  content_hash: sha256:d39df56c0dccc5a16513ac2b13b5fbcffd8b24035c5b032fbea65ee0262c4277
+  declared_license: MIT
 - repo_url: _local/delegate-fix
   name: delegate-fix
   version: 1.0.0
@@ -125,6 +142,42 @@ dependencies:
     .agents/skills/obsidian-markdown/references/PROPERTIES.md: sha256:f2d01b096a1c981a675e86b6a8c46bab271b278497646d465467b8120043b87c
   content_hash: sha256:72036fef313b7dd1c3d7e1afa17ab747f7f925392f942f22eeb7b67c817c1973
 deployments:
+- kind: project-relative
+  target: codex
+  value: .agents/skills/anti-slop
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/anti-slop
+  active_owner: ./skills/anti-slop
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/anti-slop/EXTRACT.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/anti-slop
+  active_owner: ./skills/anti-slop
+  content_hash: sha256:075812ada158338bcf039c1c2942027adad48d6ccc29892edd93f365674e0a4c
+- kind: project-relative
+  target: codex
+  value: .agents/skills/anti-slop/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/anti-slop
+  active_owner: ./skills/anti-slop
+  content_hash: sha256:97fdba06deb74eb17832ef81bda3a793278515da49dc6412b5cc2affffb96c90
+- kind: project-relative
+  target: codex
+  value: .agents/skills/anti-slop/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/anti-slop
+  active_owner: ./skills/anti-slop
+  content_hash: sha256:89f60b02bc1ae1904cc0545ff78f3b341214b86ea1d43a6266011630e1618fce
 - kind: project-relative
   target: codex
   value: .agents/skills/delegate-fix
