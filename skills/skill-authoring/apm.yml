@@ -1,6 +1,6 @@
 name: skill-authoring
 version: 1.0.0
-description: Author skills with clear responsibilities, loading conditions, and distribution
+description: Separate responsibilities and loading conditions across shared instructions, skills, supplements, triggers, and hooks
 author: soyomogi
 license: MIT
 dependencies:
