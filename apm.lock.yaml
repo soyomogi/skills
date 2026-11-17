@@ -84,11 +84,11 @@ dependencies:
   - .agents/skills/skill-authoring/SKILL.md
   - .agents/skills/skill-authoring/apm.yml
   deployed_file_hashes:
-    .agents/skills/skill-authoring/SKILL.md: sha256:6877acbe32eda44b694a44c891b37efbfc1c29739491ef974361e9d407dc47ed
-    .agents/skills/skill-authoring/apm.yml: sha256:18b525a259bf1d8faa3fbe7c8df73b153976ce15781bc7d254a60e5378db96de
+    .agents/skills/skill-authoring/SKILL.md: sha256:9fa8dd86f4ce10ae3702581ea8a71543cbe4243e5f922330748823dafe118a64
+    .agents/skills/skill-authoring/apm.yml: sha256:8c2c6603f1d4cb12ad52ef9f11fc11538f9622fd5d4131be9256f45dd02b9077
   source: local
   local_path: ./skills/skill-authoring
-  content_hash: sha256:202fcc9e373534b8ad1f23a7ae998df11923d25ca4c032e52dd8ed536ae32d40
+  content_hash: sha256:a3e9cbf5607c02457349a6903d3a0d1ccba759fe23ef29bffac43b12f4710899
   declared_license: MIT
 - repo_url: _local/obsidian-notes
   name: obsidian-notes
@@ -447,7 +447,7 @@ deployments:
   owners:
   - ./skills/skill-authoring
   active_owner: ./skills/skill-authoring
-  content_hash: sha256:6877acbe32eda44b694a44c891b37efbfc1c29739491ef974361e9d407dc47ed
+  content_hash: sha256:9fa8dd86f4ce10ae3702581ea8a71543cbe4243e5f922330748823dafe118a64
 - kind: project-relative
   target: codex
   value: .agents/skills/skill-authoring/apm.yml
@@ -456,4 +456,4 @@ deployments:
   owners:
   - ./skills/skill-authoring
   active_owner: ./skills/skill-authoring
-  content_hash: sha256:18b525a259bf1d8faa3fbe7c8df73b153976ce15781bc7d254a60e5378db96de
+  content_hash: sha256:8c2c6603f1d4cb12ad52ef9f11fc11538f9622fd5d4131be9256f45dd02b9077

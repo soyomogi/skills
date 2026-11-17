@@ -1,6 +1,6 @@
 name: skill-authoring
 version: 1.0.0
-description: Separate responsibilities and loading conditions across shared instructions, skills, supplements, triggers, and hooks
+description: Create and revise skills, shared instructions, supplements, triggers, and hooks with clear responsibilities and loading conditions
 author: soyomogi
 license: MIT
 dependencies:
