@@ -13,6 +13,7 @@ dependencies:
     - path: ./skills/delegate-fix
     - path: ./skills/session-close
     - path: ./skills/session-start
+    - path: ./skills/skill-authoring
   mcp: []
 includes: auto
 scripts: {}

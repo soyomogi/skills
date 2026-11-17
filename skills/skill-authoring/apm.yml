@@ -1,0 +1,10 @@
+name: skill-authoring
+version: 1.0.0
+description: Author skills with clear responsibilities, loading conditions, and distribution
+author: soyomogi
+license: MIT
+dependencies:
+  apm: []
+  mcp: []
+includes: auto
+scripts: {}
