@@ -1,6 +1,18 @@
 lockfile_version: '1'
 apm_version: 0.35.1
 dependencies:
+- repo_url: _local/ai-log-cleanup
+  name: ai-log-cleanup
+  version: unknown
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/ai-log-cleanup
+  - .agents/skills/ai-log-cleanup/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/ai-log-cleanup/SKILL.md: sha256:6b69edcdb4c4a5aa13a80eb1450693ca28e46daf6316b8541637f912d3791c89
+  source: local
+  local_path: ./skills/ai-log-cleanup
+  content_hash: sha256:e50b433f61095d174b98c25ff74d415ecf8cf5165aea54562febe8544dc7769b
 - repo_url: _local/anti-slop
   name: anti-slop
   version: 1.0.0
@@ -142,6 +154,24 @@ dependencies:
     .agents/skills/obsidian-markdown/references/PROPERTIES.md: sha256:f2d01b096a1c981a675e86b6a8c46bab271b278497646d465467b8120043b87c
   content_hash: sha256:72036fef313b7dd1c3d7e1afa17ab747f7f925392f942f22eeb7b67c817c1973
 deployments:
+- kind: project-relative
+  target: codex
+  value: .agents/skills/ai-log-cleanup
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/ai-log-cleanup
+  active_owner: ./skills/ai-log-cleanup
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/ai-log-cleanup/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/ai-log-cleanup
+  active_owner: ./skills/ai-log-cleanup
+  content_hash: sha256:6b69edcdb4c4a5aa13a80eb1450693ca28e46daf6316b8541637f912d3791c89
 - kind: project-relative
   target: codex
   value: .agents/skills/anti-slop

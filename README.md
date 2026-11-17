@@ -23,7 +23,7 @@ skillshare status -g
 
 既存の skillshare 環境では初期化せず、現在の設定を確認してから取り込む。
 同期元の既定値は `~/.config/skillshare/skills/`。
-`_apm` はこのリポジトリのローカル展開先へのリンクで、自作 4 スキルを配布する。
+`_apm` はこのリポジトリのローカル展開先へのリンクで、自作スキルを配布する。
 Herdr・Obsidian は GitHub から skillshare に直接導入し、APM 展開分の同名 3 スキルだけを
 skillshare の `.skillignore` で除外する。スキル本体の依存定義は維持する。
 `standard` はスキル名に `_apm__` を付けずに配布するための設定。
