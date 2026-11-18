@@ -23,12 +23,12 @@ dependencies:
   - .agents/skills/anti-slop/SKILL.md
   - .agents/skills/anti-slop/apm.yml
   deployed_file_hashes:
-    .agents/skills/anti-slop/EXTRACT.md: sha256:075812ada158338bcf039c1c2942027adad48d6ccc29892edd93f365674e0a4c
-    .agents/skills/anti-slop/SKILL.md: sha256:97fdba06deb74eb17832ef81bda3a793278515da49dc6412b5cc2affffb96c90
+    .agents/skills/anti-slop/EXTRACT.md: sha256:18ebdf5d12e4b932919a1a692010be9284e243de7df54cb3c702af4ea71cc1c0
+    .agents/skills/anti-slop/SKILL.md: sha256:a275b27199a5f2cf144728adfd5f613bd50666a91a5504ea660edd4ced46d8ee
     .agents/skills/anti-slop/apm.yml: sha256:89f60b02bc1ae1904cc0545ff78f3b341214b86ea1d43a6266011630e1618fce
   source: local
   local_path: ./skills/anti-slop
-  content_hash: sha256:d39df56c0dccc5a16513ac2b13b5fbcffd8b24035c5b032fbea65ee0262c4277
+  content_hash: sha256:f6265f3ebd72c9a472dbe786e072f739e6bf5aabe54979de83fbc81ff90f0318
   declared_license: MIT
 - repo_url: _local/delegate-fix
   name: delegate-fix
@@ -39,11 +39,11 @@ dependencies:
   - .agents/skills/delegate-fix/SKILL.md
   - .agents/skills/delegate-fix/apm.yml
   deployed_file_hashes:
-    .agents/skills/delegate-fix/SKILL.md: sha256:2993087a73ef8a3b1241f97930f29a7637ab9c634a74568b32667994ad59bc74
+    .agents/skills/delegate-fix/SKILL.md: sha256:75ea1ad1d48848a2107728c995f1bfab76a435f116d317dd72454b602f236000
     .agents/skills/delegate-fix/apm.yml: sha256:d3dca5fb07237ddf69044839b5647f5b1122250e1bc5ca8a037a3fe58e7a947b
   source: local
   local_path: ./skills/delegate-fix
-  content_hash: sha256:832bde784926e77c9285288fcd8f37e6d325aedd3ec9644f50d388c7b93b1a99
+  content_hash: sha256:2fc8f1bde318c94b2176eff9539fea93a844555f65962f8feae097f7b536c7a2
   declared_license: MIT
 - repo_url: _local/session-close
   name: session-close
@@ -54,11 +54,11 @@ dependencies:
   - .agents/skills/session-close/SKILL.md
   - .agents/skills/session-close/apm.yml
   deployed_file_hashes:
-    .agents/skills/session-close/SKILL.md: sha256:ec9e756fefe568e91492b2a99900e9b0080bb6e8c4be2831c4af6db795d957fa
+    .agents/skills/session-close/SKILL.md: sha256:9e3eeb4172b6a44d257abec9a0ed314fc1628b4e9316fd0da65a03f357155b3e
     .agents/skills/session-close/apm.yml: sha256:07a676e3c4b676daabccfa0c09fc4f19eeb447635590307f162572fa30710369
   source: local
   local_path: ./skills/session-close
-  content_hash: sha256:6d8294ae27b39df96140d3dee3111010a6817e94527147a19edd2d249ad65dc6
+  content_hash: sha256:7075d031791674be3c9de02749b845d8ffb62b3fd1b6c8b63ccb32067a0152dc
   declared_license: MIT
 - repo_url: _local/session-start
   name: session-start
@@ -69,11 +69,11 @@ dependencies:
   - .agents/skills/session-start/SKILL.md
   - .agents/skills/session-start/apm.yml
   deployed_file_hashes:
-    .agents/skills/session-start/SKILL.md: sha256:65f0e7279512a3560219dde1cb53a0780f846e39806886f01f76474438d84f9f
+    .agents/skills/session-start/SKILL.md: sha256:f8e5dd6ce608fa8c188703fa8ed34ee3edfae28abcab1bc1ffc7a1bfc206c414
     .agents/skills/session-start/apm.yml: sha256:e1280b02954cc7be6d1cba62b8ea9dfcca6352564c0375f3fc24cbecde4697ad
   source: local
   local_path: ./skills/session-start
-  content_hash: sha256:3b98794303f9d4a1b8b6634ea2e8c54b38026a639c3f6a5042bd430c0fe36196
+  content_hash: sha256:b177f9502e8e8cb260703224545b5fe0fe39ca593c736b5eb42902978ed0a206
   declared_license: MIT
 - repo_url: _local/skill-authoring
   name: skill-authoring
@@ -103,7 +103,7 @@ dependencies:
   - .agents/skills/obsidian-notes/scripts/append_ai_log.py
   - .agents/skills/obsidian-notes/tests/test_append_ai_log.py
   deployed_file_hashes:
-    .agents/skills/obsidian-notes/SKILL.md: sha256:73d870fb13465108a9647e8817104014afabe28fa5eda7b578850b4948469072
+    .agents/skills/obsidian-notes/SKILL.md: sha256:c67bc0ec36ce911880db05ad10c196686b5bca76d5ad220c259f4cd2a9dd7263
     .agents/skills/obsidian-notes/apm.yml: sha256:7117bd03a53d093243289fd88b22bbbea11498ed630e220fc95a87fcf03ba968
     .agents/skills/obsidian-notes/scripts/append_ai_log.py: sha256:02751a53696704647096bc544ab2f021dad5169ea607f2ba6d7ab8ef3e4a0405
     .agents/skills/obsidian-notes/tests/test_append_ai_log.py: sha256:3cab232406f857e4fd815516d96a2126acdf6feb4d47c57832a9566f7fc790c2
@@ -111,7 +111,7 @@ dependencies:
   local_path: ../obsidian-notes
   declaring_parent: ./skills/session-close
   anchored_local_path: skills/obsidian-notes
-  content_hash: sha256:1fcb6f378574ce58370c7e77d6ed47572786ce7aa5cf9fb58d0add08abaeb2a3
+  content_hash: sha256:ed39e9f280ce93f0d7b8d11b90b514dd345473b72f84df8cb8b3ae60b99a0117
   declared_license: MIT
 - repo_url: herdrdev/herdr
   name: herdr
@@ -204,7 +204,7 @@ deployments:
   owners:
   - ./skills/anti-slop
   active_owner: ./skills/anti-slop
-  content_hash: sha256:075812ada158338bcf039c1c2942027adad48d6ccc29892edd93f365674e0a4c
+  content_hash: sha256:18ebdf5d12e4b932919a1a692010be9284e243de7df54cb3c702af4ea71cc1c0
 - kind: project-relative
   target: codex
   value: .agents/skills/anti-slop/SKILL.md
@@ -213,7 +213,7 @@ deployments:
   owners:
   - ./skills/anti-slop
   active_owner: ./skills/anti-slop
-  content_hash: sha256:97fdba06deb74eb17832ef81bda3a793278515da49dc6412b5cc2affffb96c90
+  content_hash: sha256:a275b27199a5f2cf144728adfd5f613bd50666a91a5504ea660edd4ced46d8ee
 - kind: project-relative
   target: codex
   value: .agents/skills/anti-slop/apm.yml
@@ -240,7 +240,7 @@ deployments:
   owners:
   - ./skills/delegate-fix
   active_owner: ./skills/delegate-fix
-  content_hash: sha256:2993087a73ef8a3b1241f97930f29a7637ab9c634a74568b32667994ad59bc74
+  content_hash: sha256:75ea1ad1d48848a2107728c995f1bfab76a435f116d317dd72454b602f236000
 - kind: project-relative
   target: codex
   value: .agents/skills/delegate-fix/apm.yml
@@ -348,7 +348,7 @@ deployments:
   owners:
   - local:skills/obsidian-notes
   active_owner: local:skills/obsidian-notes
-  content_hash: sha256:73d870fb13465108a9647e8817104014afabe28fa5eda7b578850b4948469072
+  content_hash: sha256:c67bc0ec36ce911880db05ad10c196686b5bca76d5ad220c259f4cd2a9dd7263
 - kind: project-relative
   target: codex
   value: .agents/skills/obsidian-notes/apm.yml
@@ -393,7 +393,7 @@ deployments:
   owners:
   - ./skills/session-close
   active_owner: ./skills/session-close
-  content_hash: sha256:ec9e756fefe568e91492b2a99900e9b0080bb6e8c4be2831c4af6db795d957fa
+  content_hash: sha256:9e3eeb4172b6a44d257abec9a0ed314fc1628b4e9316fd0da65a03f357155b3e
 - kind: project-relative
   target: codex
   value: .agents/skills/session-close/apm.yml
@@ -420,7 +420,7 @@ deployments:
   owners:
   - ./skills/session-start
   active_owner: ./skills/session-start
-  content_hash: sha256:65f0e7279512a3560219dde1cb53a0780f846e39806886f01f76474438d84f9f
+  content_hash: sha256:f8e5dd6ce608fa8c188703fa8ed34ee3edfae28abcab1bc1ffc7a1bfc206c414
 - kind: project-relative
   target: codex
   value: .agents/skills/session-start/apm.yml
