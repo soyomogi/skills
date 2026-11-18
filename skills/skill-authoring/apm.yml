@@ -1,6 +1,6 @@
 name: skill-authoring
 version: 1.0.0
-description: Create and revise skills, shared instructions, supplements, triggers, and hooks with clear responsibilities and loading conditions
+description: Create and revise skills with clear responsibilities, scope, loading conditions, and validation criteria
 author: soyomogi
 license: MIT
 dependencies:
