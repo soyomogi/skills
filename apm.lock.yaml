@@ -39,11 +39,11 @@ dependencies:
   - .agents/skills/delegate-fix/SKILL.md
   - .agents/skills/delegate-fix/apm.yml
   deployed_file_hashes:
-    .agents/skills/delegate-fix/SKILL.md: sha256:75ea1ad1d48848a2107728c995f1bfab76a435f116d317dd72454b602f236000
+    .agents/skills/delegate-fix/SKILL.md: sha256:abd477210f1cb72fb48a21139994c73017db5419c8709eb4b1b479101d387e7a
     .agents/skills/delegate-fix/apm.yml: sha256:d3dca5fb07237ddf69044839b5647f5b1122250e1bc5ca8a037a3fe58e7a947b
   source: local
   local_path: ./skills/delegate-fix
-  content_hash: sha256:2fc8f1bde318c94b2176eff9539fea93a844555f65962f8feae097f7b536c7a2
+  content_hash: sha256:efce171abc5ca52733f90467ce02e24fe0e5f47d5403a8ff29637bf0d541deef
   declared_license: MIT
 - repo_url: _local/session-close
   name: session-close
@@ -103,7 +103,7 @@ dependencies:
   - .agents/skills/obsidian-notes/scripts/append_ai_log.py
   - .agents/skills/obsidian-notes/tests/test_append_ai_log.py
   deployed_file_hashes:
-    .agents/skills/obsidian-notes/SKILL.md: sha256:c67bc0ec36ce911880db05ad10c196686b5bca76d5ad220c259f4cd2a9dd7263
+    .agents/skills/obsidian-notes/SKILL.md: sha256:3e356ee240febd129db8f6408d814e25f078777a920bcf8991ab50a128b064ec
     .agents/skills/obsidian-notes/apm.yml: sha256:7117bd03a53d093243289fd88b22bbbea11498ed630e220fc95a87fcf03ba968
     .agents/skills/obsidian-notes/scripts/append_ai_log.py: sha256:02751a53696704647096bc544ab2f021dad5169ea607f2ba6d7ab8ef3e4a0405
     .agents/skills/obsidian-notes/tests/test_append_ai_log.py: sha256:3cab232406f857e4fd815516d96a2126acdf6feb4d47c57832a9566f7fc790c2
@@ -111,7 +111,7 @@ dependencies:
   local_path: ../obsidian-notes
   declaring_parent: ./skills/session-close
   anchored_local_path: skills/obsidian-notes
-  content_hash: sha256:ed39e9f280ce93f0d7b8d11b90b514dd345473b72f84df8cb8b3ae60b99a0117
+  content_hash: sha256:f9911eea65201a378712d2dae0447ebb8a4c2f911e2e9c4cb94a4c28fd9d803a
   declared_license: MIT
 - repo_url: herdrdev/herdr
   name: herdr
@@ -133,7 +133,7 @@ dependencies:
 - repo_url: obsidianmd/obsidian-skills
   name: obsidian-cli
   host: github.com
-  resolved_commit: 398127736bd4ba42d767b1419fee1a927508370b
+  resolved_commit: 462a27fa456e43a68bd645fef457217326bfd369
   version: unknown
   virtual_path: plugins/obsidian/skills/obsidian-cli
   is_virtual: true
@@ -149,7 +149,7 @@ dependencies:
 - repo_url: obsidianmd/obsidian-skills
   name: obsidian-markdown
   host: github.com
-  resolved_commit: 398127736bd4ba42d767b1419fee1a927508370b
+  resolved_commit: 462a27fa456e43a68bd645fef457217326bfd369
   version: unknown
   virtual_path: plugins/obsidian/skills/obsidian-markdown
   is_virtual: true
@@ -240,7 +240,7 @@ deployments:
   owners:
   - ./skills/delegate-fix
   active_owner: ./skills/delegate-fix
-  content_hash: sha256:75ea1ad1d48848a2107728c995f1bfab76a435f116d317dd72454b602f236000
+  content_hash: sha256:abd477210f1cb72fb48a21139994c73017db5419c8709eb4b1b479101d387e7a
 - kind: project-relative
   target: codex
   value: .agents/skills/delegate-fix/apm.yml
@@ -348,7 +348,7 @@ deployments:
   owners:
   - local:skills/obsidian-notes
   active_owner: local:skills/obsidian-notes
-  content_hash: sha256:c67bc0ec36ce911880db05ad10c196686b5bca76d5ad220c259f4cd2a9dd7263
+  content_hash: sha256:3e356ee240febd129db8f6408d814e25f078777a920bcf8991ab50a128b064ec
 - kind: project-relative
   target: codex
   value: .agents/skills/obsidian-notes/apm.yml
