@@ -39,5 +39,6 @@ description: 自分の Obsidian ノートの運用規則。Obsidian ノートを
 - `status`: 完了した事実を表す20文字以内のラベル。
 - `next_action`: 人間向けの次のアクションを20文字以内で記録。
 - `next_action_detail`: AI が次のセッションで実行する最初の具体的手順。
+- タスクノートでは、`description` に目的と範囲に加え、ゴール（完了とみなす状態）を明記する。
 - 直近の次アクションはフロントマターの `next_action` / `next_action_detail` に集約し、本文には書かない。本文には計画・仕様・判断条件を残す。
 - タスクが完了し、後続作業がなければ、`next_action` と `next_action_detail` を空にする。
