@@ -4,12 +4,15 @@
 import argparse
 from contextlib import ExitStack, contextmanager
 from datetime import datetime
+import errno
 import fcntl
+import hashlib
 import os
 from pathlib import Path
 import re
 import subprocess
 import sys
+import tempfile
 
 
 def insert_in_ai_log(text, content):
@@ -49,7 +52,18 @@ def locked_notes(paths):
             # Keep lock order stable, including when reopening replaced files.
             for target in sorted(paths):
                 note = stack.enter_context(target.open("r+", encoding="utf-8", newline=""))
-                fcntl.flock(note, fcntl.LOCK_EX)
+                try:
+                    fcntl.flock(note, fcntl.LOCK_EX)
+                except OSError as error:
+                    if error.errno not in (errno.ENOSYS, errno.EOPNOTSUPP):
+                        raise
+                    # Android shared storage may not implement flock. Keep the
+                    # notes in place and lock script writers on private storage.
+                    lock_dir = Path(tempfile.gettempdir()) / "obsidian-ai-log-locks"
+                    lock_dir.mkdir(mode=0o700, exist_ok=True)
+                    key = hashlib.sha256(os.fsencode(target)).hexdigest()
+                    lock = stack.enter_context((lock_dir / key).open("a"))
+                    fcntl.flock(lock, fcntl.LOCK_EX)
                 notes[target] = note
             # A path may have been replaced while either lock was pending.
             try:

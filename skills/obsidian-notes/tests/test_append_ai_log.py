@@ -1,4 +1,6 @@
+import errno
 import importlib.util
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import tempfile
 import unittest
@@ -89,6 +91,48 @@ class FileReplacementTests(unittest.TestCase):
             with self.assertRaises(FileNotFoundError):
                 self.append()
         self.assertNotIn("[[", self.daily.read_text())
+
+
+class UnsupportedLockTests(FileReplacementTests):
+    def unsupported_locks(self, error_number=errno.ENOSYS):
+        flock = log.fcntl.flock
+
+        def intercept(note, operation):
+            if Path(note.name) in (self.note, self.daily):
+                raise OSError(error_number, "Lock unavailable")
+            return flock(note, operation)
+
+        return patch.object(log.fcntl, "flock", side_effect=intercept)
+
+    def test_unsupported_locks_append_both_notes(self):
+        for error_number in (errno.ENOSYS, errno.EOPNOTSUPP):
+            with self.subTest(errno=error_number), self.unsupported_locks(error_number):
+                reference = self.append()
+            self.assertIn(reference, self.daily.read_text())
+        self.assertEqual(self.note.read_text().count("new log"), 2)
+
+    def test_permission_errors_propagate_without_writing(self):
+        before = [p.read_bytes() for p in (self.note, self.daily)]
+        with self.unsupported_locks(errno.EACCES):
+            with self.assertRaises(PermissionError):
+                self.append()
+        self.assertEqual(before, [p.read_bytes() for p in (self.note, self.daily)])
+
+    def test_concurrent_appends_keep_every_entry_and_reference(self):
+        with self.unsupported_locks(), ThreadPoolExecutor(max_workers=4) as pool:
+            references = list(pool.map(lambda _: self.append(), range(12)))
+        self.assertEqual(len(set(references)), 12)
+        self.assertEqual(self.note.read_text().count("new log"), 12)
+        for reference in references:
+            self.assertEqual(self.daily.read_text().count(reference + "\n"), 1)
+
+    def test_missing_section_does_not_write_either_note(self):
+        self.daily.write_text("No log heading\n", encoding="utf-8")
+        before = [p.read_bytes() for p in (self.note, self.daily)]
+        with self.unsupported_locks():
+            with self.assertRaisesRegex(ValueError, "no ai-log"):
+                self.append()
+        self.assertEqual(before, [p.read_bytes() for p in (self.note, self.daily)])
 
 
 if __name__ == "__main__":

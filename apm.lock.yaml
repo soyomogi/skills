@@ -105,13 +105,13 @@ dependencies:
   deployed_file_hashes:
     .agents/skills/obsidian-notes/SKILL.md: sha256:3e356ee240febd129db8f6408d814e25f078777a920bcf8991ab50a128b064ec
     .agents/skills/obsidian-notes/apm.yml: sha256:7117bd03a53d093243289fd88b22bbbea11498ed630e220fc95a87fcf03ba968
-    .agents/skills/obsidian-notes/scripts/append_ai_log.py: sha256:02751a53696704647096bc544ab2f021dad5169ea607f2ba6d7ab8ef3e4a0405
-    .agents/skills/obsidian-notes/tests/test_append_ai_log.py: sha256:3cab232406f857e4fd815516d96a2126acdf6feb4d47c57832a9566f7fc790c2
+    .agents/skills/obsidian-notes/scripts/append_ai_log.py: sha256:46d19b3f3e4652d96ff69fa6f3842e9199ad566b9b705ad81cc25e4d397d3e2c
+    .agents/skills/obsidian-notes/tests/test_append_ai_log.py: sha256:03477ccbd418846bad50823c40430e53a2883c6368b4f126d487963597f0ec6c
   source: local
   local_path: ../obsidian-notes
   declaring_parent: ./skills/session-close
   anchored_local_path: skills/obsidian-notes
-  content_hash: sha256:f9911eea65201a378712d2dae0447ebb8a4c2f911e2e9c4cb94a4c28fd9d803a
+  content_hash: sha256:31d31a62f6533d3517798d02933e641d9c7dcb8c994ed4320c7b871d813ad5ec
   declared_license: MIT
 - repo_url: herdrdev/herdr
   name: herdr
@@ -366,7 +366,7 @@ deployments:
   owners:
   - local:skills/obsidian-notes
   active_owner: local:skills/obsidian-notes
-  content_hash: sha256:02751a53696704647096bc544ab2f021dad5169ea607f2ba6d7ab8ef3e4a0405
+  content_hash: sha256:46d19b3f3e4652d96ff69fa6f3842e9199ad566b9b705ad81cc25e4d397d3e2c
 - kind: project-relative
   target: codex
   value: .agents/skills/obsidian-notes/tests/test_append_ai_log.py
@@ -375,7 +375,7 @@ deployments:
   owners:
   - local:skills/obsidian-notes
   active_owner: local:skills/obsidian-notes
-  content_hash: sha256:3cab232406f857e4fd815516d96a2126acdf6feb4d47c57832a9566f7fc790c2
+  content_hash: sha256:03477ccbd418846bad50823c40430e53a2883c6368b4f126d487963597f0ec6c
 - kind: project-relative
   target: codex
   value: .agents/skills/session-close
