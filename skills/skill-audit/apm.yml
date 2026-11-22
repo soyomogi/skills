@@ -1,0 +1,11 @@
+name: skill-audit
+version: 1.0.0
+description: Audit a set of skills for semantic duplication and consolidate it
+author: soyomogi
+license: MIT
+dependencies:
+  apm:
+    - path: ../skill-authoring
+  mcp: []
+includes: auto
+scripts: {}
