@@ -103,7 +103,7 @@ dependencies:
   - .agents/skills/obsidian-notes/scripts/append_ai_log.py
   - .agents/skills/obsidian-notes/tests/test_append_ai_log.py
   deployed_file_hashes:
-    .agents/skills/obsidian-notes/SKILL.md: sha256:3e356ee240febd129db8f6408d814e25f078777a920bcf8991ab50a128b064ec
+    .agents/skills/obsidian-notes/SKILL.md: sha256:a6343574728c982effc9d7a239b58fec3fef5d0bb860cc555b23bb8e36f151a2
     .agents/skills/obsidian-notes/apm.yml: sha256:7117bd03a53d093243289fd88b22bbbea11498ed630e220fc95a87fcf03ba968
     .agents/skills/obsidian-notes/scripts/append_ai_log.py: sha256:d083fc348368698c7e2ff34253d42043d7175458cc84107c773e0b54354ceff1
     .agents/skills/obsidian-notes/tests/test_append_ai_log.py: sha256:bc0d6ff6d3b5687968c6214a0d673f4858f8c43c8e24f4c3df0676664da2e7c6
@@ -111,7 +111,7 @@ dependencies:
   local_path: ../obsidian-notes
   declaring_parent: ./skills/session-close
   anchored_local_path: skills/obsidian-notes
-  content_hash: sha256:868c0b14fb524c3a0a2e3e67823c5cb651c0188c2cd52173263c40cd54a2229e
+  content_hash: sha256:4d8220f8b764219a0123b65a1b7192ceeafa3617c9c6cfada8ae9ea5840c3e46
   declared_license: MIT
 - repo_url: _local/skill-authoring
   name: skill-authoring
@@ -152,7 +152,7 @@ dependencies:
 - repo_url: obsidianmd/obsidian-skills
   name: obsidian-cli
   host: github.com
-  resolved_commit: 462a27fa456e43a68bd645fef457217326bfd369
+  resolved_commit: b110b2f8e9eb1f287892f937050dfd40af862cbb
   version: unknown
   virtual_path: plugins/obsidian/skills/obsidian-cli
   is_virtual: true
@@ -168,7 +168,7 @@ dependencies:
 - repo_url: obsidianmd/obsidian-skills
   name: obsidian-markdown
   host: github.com
-  resolved_commit: 462a27fa456e43a68bd645fef457217326bfd369
+  resolved_commit: b110b2f8e9eb1f287892f937050dfd40af862cbb
   version: unknown
   virtual_path: plugins/obsidian/skills/obsidian-markdown
   is_virtual: true
@@ -367,7 +367,7 @@ deployments:
   owners:
   - local:skills/obsidian-notes
   active_owner: local:skills/obsidian-notes
-  content_hash: sha256:3e356ee240febd129db8f6408d814e25f078777a920bcf8991ab50a128b064ec
+  content_hash: sha256:a6343574728c982effc9d7a239b58fec3fef5d0bb860cc555b23bb8e36f151a2
 - kind: project-relative
   target: codex
   value: .agents/skills/obsidian-notes/apm.yml
