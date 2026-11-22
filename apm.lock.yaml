@@ -75,20 +75,20 @@ dependencies:
   local_path: ./skills/session-start
   content_hash: sha256:b177f9502e8e8cb260703224545b5fe0fe39ca593c736b5eb42902978ed0a206
   declared_license: MIT
-- repo_url: _local/skill-authoring
-  name: skill-authoring
+- repo_url: _local/skill-audit
+  name: skill-audit
   version: 1.0.0
   package_type: hybrid
   deployed_files:
-  - .agents/skills/skill-authoring
-  - .agents/skills/skill-authoring/SKILL.md
-  - .agents/skills/skill-authoring/apm.yml
+  - .agents/skills/skill-audit
+  - .agents/skills/skill-audit/SKILL.md
+  - .agents/skills/skill-audit/apm.yml
   deployed_file_hashes:
-    .agents/skills/skill-authoring/SKILL.md: sha256:77e6cc214ff70047d255f9134972a75d9a1b8354e478f866405d96ee9a39c1ee
-    .agents/skills/skill-authoring/apm.yml: sha256:ce877ccfaaa44f417626675d27cc972085bfd3bae232cf70ed367d5afb5160bf
+    .agents/skills/skill-audit/SKILL.md: sha256:5194d16f9fe991504bb13ce1a6332f4b1d563c6c8b52d59bc93df0feb5a8e705
+    .agents/skills/skill-audit/apm.yml: sha256:7d20e62f4f2f416825e020e879e8e64abd079c1805be37a7ea44069a8628494f
   source: local
-  local_path: ./skills/skill-authoring
-  content_hash: sha256:05136dea99690593f9d30cf9068473b8014aa76036357dcfcd234a75fe2486e9
+  local_path: ./skills/skill-audit
+  content_hash: sha256:5ae92d94104054b3e25968493d3e11e926b1846d1320dc20eecaa7b5baaded4e
   declared_license: MIT
 - repo_url: _local/obsidian-notes
   name: obsidian-notes
@@ -112,6 +112,25 @@ dependencies:
   declaring_parent: ./skills/session-close
   anchored_local_path: skills/obsidian-notes
   content_hash: sha256:f9911eea65201a378712d2dae0447ebb8a4c2f911e2e9c4cb94a4c28fd9d803a
+  declared_license: MIT
+- repo_url: _local/skill-authoring
+  name: skill-authoring
+  version: 1.0.0
+  depth: 2
+  resolved_by: _local/skill-audit
+  package_type: hybrid
+  deployed_files:
+  - .agents/skills/skill-authoring
+  - .agents/skills/skill-authoring/SKILL.md
+  - .agents/skills/skill-authoring/apm.yml
+  deployed_file_hashes:
+    .agents/skills/skill-authoring/SKILL.md: sha256:503a41e638736512e20785266a8e53f73f993e3e9b92d5bbb28c1f992801ad23
+    .agents/skills/skill-authoring/apm.yml: sha256:ce877ccfaaa44f417626675d27cc972085bfd3bae232cf70ed367d5afb5160bf
+  source: local
+  local_path: ../skill-authoring
+  declaring_parent: ./skills/skill-audit
+  anchored_local_path: skills/skill-authoring
+  content_hash: sha256:dfa9dcaf8e3ce950d12d7ab904ed07a3e7131af5837045258581ef80a0915dc2
   declared_license: MIT
 - repo_url: herdrdev/herdr
   name: herdr
@@ -432,12 +451,39 @@ deployments:
   content_hash: sha256:e1280b02954cc7be6d1cba62b8ea9dfcca6352564c0375f3fc24cbecde4697ad
 - kind: project-relative
   target: codex
+  value: .agents/skills/skill-audit
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/skill-audit
+  active_owner: ./skills/skill-audit
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/skill-audit/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/skill-audit
+  active_owner: ./skills/skill-audit
+  content_hash: sha256:5194d16f9fe991504bb13ce1a6332f4b1d563c6c8b52d59bc93df0feb5a8e705
+- kind: project-relative
+  target: codex
+  value: .agents/skills/skill-audit/apm.yml
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/skill-audit
+  active_owner: ./skills/skill-audit
+  content_hash: sha256:7d20e62f4f2f416825e020e879e8e64abd079c1805be37a7ea44069a8628494f
+- kind: project-relative
+  target: codex
   value: .agents/skills/skill-authoring
   runtime: null
   scope: project
   owners:
-  - ./skills/skill-authoring
-  active_owner: ./skills/skill-authoring
+  - local:skills/skill-authoring
+  active_owner: local:skills/skill-authoring
   content_hash: null
 - kind: project-relative
   target: codex
@@ -445,15 +491,15 @@ deployments:
   runtime: null
   scope: project
   owners:
-  - ./skills/skill-authoring
-  active_owner: ./skills/skill-authoring
-  content_hash: sha256:77e6cc214ff70047d255f9134972a75d9a1b8354e478f866405d96ee9a39c1ee
+  - local:skills/skill-authoring
+  active_owner: local:skills/skill-authoring
+  content_hash: sha256:503a41e638736512e20785266a8e53f73f993e3e9b92d5bbb28c1f992801ad23
 - kind: project-relative
   target: codex
   value: .agents/skills/skill-authoring/apm.yml
   runtime: null
   scope: project
   owners:
-  - ./skills/skill-authoring
-  active_owner: ./skills/skill-authoring
+  - local:skills/skill-authoring
+  active_owner: local:skills/skill-authoring
   content_hash: sha256:ce877ccfaaa44f417626675d27cc972085bfd3bae232cf70ed367d5afb5160bf
