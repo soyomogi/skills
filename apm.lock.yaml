@@ -84,11 +84,11 @@ dependencies:
   - .agents/skills/skill-audit/SKILL.md
   - .agents/skills/skill-audit/apm.yml
   deployed_file_hashes:
-    .agents/skills/skill-audit/SKILL.md: sha256:5194d16f9fe991504bb13ce1a6332f4b1d563c6c8b52d59bc93df0feb5a8e705
+    .agents/skills/skill-audit/SKILL.md: sha256:4ba83d4731afef8f204745df4e43595b5078810eeb195c851ec950cc9820934e
     .agents/skills/skill-audit/apm.yml: sha256:7d20e62f4f2f416825e020e879e8e64abd079c1805be37a7ea44069a8628494f
   source: local
   local_path: ./skills/skill-audit
-  content_hash: sha256:5ae92d94104054b3e25968493d3e11e926b1846d1320dc20eecaa7b5baaded4e
+  content_hash: sha256:38b3e0a73483631fdb8ce897614e07fa7a10aab137e77dedc1908134b7667106
   declared_license: MIT
 - repo_url: _local/obsidian-notes
   name: obsidian-notes
@@ -466,7 +466,7 @@ deployments:
   owners:
   - ./skills/skill-audit
   active_owner: ./skills/skill-audit
-  content_hash: sha256:5194d16f9fe991504bb13ce1a6332f4b1d563c6c8b52d59bc93df0feb5a8e705
+  content_hash: sha256:4ba83d4731afef8f204745df4e43595b5078810eeb195c851ec950cc9820934e
 - kind: project-relative
   target: codex
   value: .agents/skills/skill-audit/apm.yml
