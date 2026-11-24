@@ -26,11 +26,11 @@ dependencies:
   - .agents/skills/anti-slop/apm.yml
   deployed_file_hashes:
     .agents/skills/anti-slop/EXTRACT.md: sha256:18ebdf5d12e4b932919a1a692010be9284e243de7df54cb3c702af4ea71cc1c0
-    .agents/skills/anti-slop/SKILL.md: sha256:5e72e104e319c97280de3680a988d542461007e752679ab7aa99ab1a9fbec255
+    .agents/skills/anti-slop/SKILL.md: sha256:aa9d2ff4c20125db0232331de21073110f7cee7b8ba9c4522c78eaedcf54a667
     .agents/skills/anti-slop/apm.yml: sha256:89f60b02bc1ae1904cc0545ff78f3b341214b86ea1d43a6266011630e1618fce
   source: local
   local_path: ./skills/anti-slop
-  content_hash: sha256:3a3249d3c92e0e19f583edd5e60d9258636bca8b013a830711fc5c180310eafd
+  content_hash: sha256:61ccfe4370653e3b079c9addcfddaa049ef1d9caabc89db3c1f2a200a499e953
   declared_license: MIT
 - repo_url: _local/delegate-fix
   name: delegate-fix
@@ -243,7 +243,7 @@ deployments:
   owners:
   - ./skills/anti-slop
   active_owner: ./skills/anti-slop
-  content_hash: sha256:5e72e104e319c97280de3680a988d542461007e752679ab7aa99ab1a9fbec255
+  content_hash: sha256:aa9d2ff4c20125db0232331de21073110f7cee7b8ba9c4522c78eaedcf54a667
 - kind: project-relative
   target: codex
   value: .agents/skills/anti-slop/apm.yml
