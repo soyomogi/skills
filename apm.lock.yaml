@@ -126,13 +126,13 @@ dependencies:
   - .agents/skills/skill-authoring/SKILL.md
   - .agents/skills/skill-authoring/apm.yml
   deployed_file_hashes:
-    .agents/skills/skill-authoring/SKILL.md: sha256:503a41e638736512e20785266a8e53f73f993e3e9b92d5bbb28c1f992801ad23
+    .agents/skills/skill-authoring/SKILL.md: sha256:aa88d4a495e9a53698b44bd7fb4643153156a531c1069f9d287023c8677f5e52
     .agents/skills/skill-authoring/apm.yml: sha256:ce877ccfaaa44f417626675d27cc972085bfd3bae232cf70ed367d5afb5160bf
   source: local
   local_path: ../skill-authoring
   declaring_parent: ./skills/skill-audit
   anchored_local_path: skills/skill-authoring
-  content_hash: sha256:dfa9dcaf8e3ce950d12d7ab904ed07a3e7131af5837045258581ef80a0915dc2
+  content_hash: sha256:1665426ff236563c39f9a9eb4f082173c98cc8ebf3946cb9ca63f394ea4f70eb
   declared_license: MIT
 - repo_url: herdrdev/herdr
   name: herdr
@@ -504,7 +504,7 @@ deployments:
   owners:
   - local:skills/skill-authoring
   active_owner: local:skills/skill-authoring
-  content_hash: sha256:503a41e638736512e20785266a8e53f73f993e3e9b92d5bbb28c1f992801ad23
+  content_hash: sha256:aa88d4a495e9a53698b44bd7fb4643153156a531c1069f9d287023c8677f5e52
 - kind: project-relative
   target: codex
   value: .agents/skills/skill-authoring/apm.yml
