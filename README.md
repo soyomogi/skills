@@ -1,48 +1,33 @@
 # Skills
 
-個人用のエージェントスキル集。
+## リポジトリ内で使う
 
-自作スキルとその依存関係は [APM](https://github.com/microsoft/apm) で管理する。
-グローバルへの配布は [skillshare](https://github.com/runkids/skillshare) の merge モードを使う。
-
-初回セットアップ（リポジトリのルートで実行）:
+Codex は `.agents/skills/` の相対 symlink を通じて `skills/` の自作スキルを読む。外部依存は [APM](https://github.com/microsoft/apm) で展開する。展開するコミットは `apm.lock.yaml` に記録している。
 
 ```sh
-brew install apm skillshare
-apm install --target codex
-skillshare init --targets claude,universal --mode merge --no-copy --no-git --no-skill
-skillshare link "$PWD/.agents/skills" --name _apm --enable -g
-skillshare disable _apm/herdr -g
-skillshare disable _apm/obsidian-cli -g
-skillshare disable _apm/obsidian-markdown -g
-skillshare target claude --target-naming standard -g
-skillshare target universal --target-naming standard -g
+apm install --target codex --frozen
+```
+
+Windows で相対 symlink を使う場合は、開発者モードを有効にして `git clone -c core.symlinks=true` で取得する。
+
+## グローバルに配布する
+
+dotfiles を使う場合は、[dotfiles のセットアップ手順](https://github.com/soyomogi/dotfiles#skillshare-%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%A8%E5%90%8C%E6%9C%9F)に従う。[skillshare](https://github.com/runkids/skillshare) を単独で設定する場合は、このリポジトリのルートで実行する。初期化済みなら最初の行を省く。旧手順で `_apm` を登録している場合は、先に `skillshare unlink _apm -g` を実行する。
+
+```sh
+skillshare init --targets claude,universal --mode copy --no-copy --no-git --no-skill
+skillshare link "$PWD/skills" --name soyomogi --enable -g
+skillshare target claude --mode copy --target-naming standard -g
+skillshare target universal --mode copy --target-naming standard -g
 sh scripts/install-external-skills.sh
-skillshare status -g
 ```
 
-既存の skillshare 環境では初期化せず、現在の設定を確認してから取り込む。
-同期元の既定値は `~/.config/skillshare/skills/`。
-`_apm` はこのリポジトリのローカル展開先へのリンクで、自作スキルを配布する。
-Herdr・Obsidian は GitHub から skillshare に直接導入し、APM 展開分の同名 3 スキルだけを
-skillshare の `.skillignore` で除外する。スキル本体の依存定義は維持する。
-`standard` はスキル名に `_apm__` を付けずに配布するための設定。
+自作スキルを追加・削除したら、対応する `.agents/skills/` の symlink も更新する。グローバルのコピーは `skillshare sync -g` で更新し、extras を使う場合は続けて `skillshare sync extras -g` を実行する。
 
-自作スキルの編集・追加・削除後は、`skills/` の原本から再展開して同期する:
-
-```sh
-apm install --target codex
-skillshare sync -g
-```
-
-APM 側の依存更新は `apm update --target codex`、skillshare で直接導入した
-外部スキルの更新は `skillshare update --all -g` を使い、その後 `skillshare sync -g` を実行する。
-APM のグローバルインストール（`-g`）は使わない。
-Codex の組み込みスキルとサービス連携プラグインは別途管理する。
-
+外部スキルの更新には、リポジトリ内では `apm update --target codex`、グローバルでは `skillshare update --all -g` を使う。
 
 ## テスト
 
-開発用のシナリオと実行手順は [`test-skills/`](test-skills/) に置く。skillを変更したときは、必要に応じて対応するテストも更新し、振る舞いを確認する。anti-slopの実行手順は [`test-skills/anti-slop/RUN.md`](test-skills/anti-slop/RUN.md) を参照する。
+スキルを変更したら、対応する [テストシナリオ](test-skills/) で動作を確認する。anti-slop の実行手順は [RUN.md](test-skills/anti-slop/RUN.md) を参照。
 
-テストには架空の入力と期待する振る舞いを記載し、個人情報や実際の会話・案件情報を含めない。生成結果・実行ログ・採点記録は一時ディレクトリで扱い、コミットしない。`test-skills/` はskillの配布対象に含めない。
+テストには架空の入力と期待する振る舞いを記載する。生成結果、実行ログ、採点記録は一時ディレクトリに置き、Git で管理するのはシナリオと手順に限る。

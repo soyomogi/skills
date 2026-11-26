@@ -1,6 +1,6 @@
 name: skills
 version: 1.0.0
-description: Local skill deployment and dependency definitions for skillshare
+description: External skill dependencies for this repository
 author: soyomogi
 license: MIT
 # Global deployment is managed by skillshare, not APM.
@@ -8,12 +8,13 @@ targets:
   - codex
 dependencies:
   apm:
-    - path: ./skills/ai-log-cleanup
-    - path: ./skills/anti-slop
-    - path: ./skills/delegate-fix
-    - path: ./skills/session-close
-    - path: ./skills/session-start
-    - path: ./skills/skill-audit
+    - git: herdrdev/herdr
+      path: skills/herdr
+      ref: v0.9.5
+    - git: obsidianmd/obsidian-skills
+      path: plugins/obsidian/skills/obsidian-cli
+    - git: obsidianmd/obsidian-skills
+      path: plugins/obsidian/skills/obsidian-markdown
   mcp: []
 includes: auto
 scripts: {}

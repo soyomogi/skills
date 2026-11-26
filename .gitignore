@@ -1,4 +1,4 @@
-/.agents/
+/.agents/skills/*/
 /.claude/
 /build/
 # APM dependencies
