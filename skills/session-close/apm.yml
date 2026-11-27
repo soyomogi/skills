@@ -1,11 +1,10 @@
 name: session-close
 version: 1.0.0
-description: Record completed work and the next handoff in an Obsidian note
+description: Record work outcomes and prepare a handoff
 author: soyomogi
 license: MIT
 dependencies:
-  apm:
-    - path: ../obsidian-notes
+  apm: []
   mcp: []
 includes: auto
 scripts: {}
